@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1 {
+    @apply text-2xl font-extrabold;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+@utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@import './page_button.css';
+@import './header.css';
+@import './footer.css';
+
+@layer components {
+  .header {
+    z-index: 1;
+  }
+  .abs-top {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+  }
+  .abs-bot {
+    position: absolute;
+    bottom: 0px;
+  }
+  .abs-bl {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .abs-br {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .abs-tl {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+  }
+  .screen{
+    width: 100vw;
+    height: 100vh;
+  }
+  .flex-col{
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+  }
+  .flex-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .-center{
+    justify-content: center;
+    align-items: center;
+  }
+};
+
