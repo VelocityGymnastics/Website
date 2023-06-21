@@ -18,18 +18,17 @@ const pages: pagesType = {
 }
 
 const selectPage = (selected: string) => {
-  for (const page in pages) { pages[page].style = "" }
-  if (selected)
-    pages[selected].style = "bg-orange-400 pointer-events-none"
+  for (const page in pages) pages[page]!.style = "" 
+  if (selected) pages[selected]!.style = "bg-orange-400 pointer-events-none"
 }
 
 const displayPages = () => {
   return Object.keys(pages).map((page, index) => {
-    const style = pages[page]?.style
+    const style = pages[page]!.style
     return  (
       <PageButtons 
         key={index} 
-        pagePath={pages[page]?.pagePath} 
+        pagePath={pages[page]!.pagePath} 
         label={page} 
         style={style} 
         select={selectPage}

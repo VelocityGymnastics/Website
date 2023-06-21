@@ -2,13 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 
 interface Props {
-  style?: string;
-  pagePath?: string;
-  label?: string;
+  style: string;
+  pagePath: string;
+  label: string;
+  select: (selected: string) => void;
 }
 
 const PageButtons: React.FC<Props> = (props) => {
-  const style = "page-button " + props?.style;
+  const style = "page-button " + props.style;
   const divRef = React.useRef(null)
   const linkRef = React.useRef<HTMLAnchorElement>(null)
   
@@ -25,8 +26,8 @@ const PageButtons: React.FC<Props> = (props) => {
       className={style} 
       onClick={handleClick}
     >
-      <Link ref={linkRef} href={props?.pagePath} className="w-full text-center">
-        {props?.label}
+      <Link ref={linkRef} href={props.pagePath} className="w-full text-center">
+        {props.label}
       </Link>
     </div>
   );

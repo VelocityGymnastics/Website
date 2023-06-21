@@ -1,10 +1,9 @@
 //import { signIn, signOut, useSession } from "next-auth/react";
 //import Link from "next/link";
 //import { api } from "~/utils/api";
-import { type NextPage } from "next"
 import React from "react"
 import Header from "../components/Header"
-import Footer from "../components/Footer"
+//import Footer from "../components/Footer"
 
 
 const Home: React.FC = () => {
@@ -18,7 +17,6 @@ const Home: React.FC = () => {
           <h1> HOME </h1>
         </div>
 
-        <Footer />
       </main>
     </>
   );
