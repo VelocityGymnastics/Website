@@ -1,5 +1,5 @@
 import React from 'react';
-import GoBack from "./goBack";
+//import GoBack from "./goBack";
 //import { useSession } from "next-auth/react"
 
 interface FooterProps {
@@ -13,7 +13,7 @@ const Footer = (props: FooterProps) => {
     <div>
       {props.goBack &&
         <div className="abs-bl w-[25vw] h-[25vw] overflow-hidden flex -center bg-secondary-dark rounded-tr-2xl border-r-4 border-t-2 border-white">
-          <GoBack />
+          //<GoBack />
         </div>
       }
     </div>
