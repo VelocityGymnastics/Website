@@ -2,6 +2,8 @@ import React from 'react';
 import PageButtons from "./PageButtons"
 import Head from "next/head"
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 interface pagesType {
   [key: string]: {
@@ -18,26 +20,31 @@ const pages: pagesType = {
 }
 
 const selectPage = (selected: string) => {
-  for (const page in pages) pages[page]!.style = "" 
+  for (const page in pages) pages[page]!.style = ""
   if (selected) pages[selected]!.style = "bg-orange-400 pointer-events-none"
 }
 
-const displayPages = () => {
+const displayPages = (current: string) => {
+  selectPage(current)
   return Object.keys(pages).map((page, index) => {
     const style = pages[page]!.style
-    return  (
-      <PageButtons 
-        key={index} 
-        pagePath={pages[page]!.pagePath} 
-        label={page} 
-        style={style} 
+    return (
+      <PageButtons
+        key={index}
+        pagePath={pages[page]!.pagePath}
+        label={page}
+        style={style}
         select={selectPage}
       />
     )
   })
 }
 
-const Header: React.FC = () => {
+interface Props {
+  current: string;
+}
+
+const Header: React.FC<Props> = (props) => {
   return (
     <>
       <Head>
@@ -48,26 +55,30 @@ const Header: React.FC = () => {
 
       <div className="header-background">
         <div className="header-top">
-          <Link 
-            className="header-logo" 
-            href="/"
-            onClick={() => {selectPage("")}}>
+          <Link
+            className="header-logo"
+            href="/">
             Velocity Gymnastics
           </Link>
-          <Link 
-            className="header-enroll" 
-            href="/enroll"
-            onClick={() => {selectPage("")}}>
+          <Link
+            className="header-enroll"
+            href="/enroll">
             Enroll Now
           </Link>
         </div>
 
         <div className="header-pages">
-          {displayPages()}
+          {displayPages(props.current)}
+
           <div className="header-socials">
-            <div className="social"> FB </div>
-            <div className="social"> IG </div>
-            <div className="social"> YT </div>
+            <a href="https://www.facebook.com" target="blank">
+              <FontAwesomeIcon icon={faFacebook} /> </a>
+            <a href="https://www.instagram.com" target="blank">
+              <FontAwesomeIcon icon={faInstagram} /> </a>
+            <a href="https://www.youtube.com" target="blank">
+              <FontAwesomeIcon icon={faYoutube} /> </a>
+            <a href="https://www.twitter.com" target="blank">
+              <FontAwesomeIcon icon={faTwitter} /> </a>
           </div>
         </div>
 

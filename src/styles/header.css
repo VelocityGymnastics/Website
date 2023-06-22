@@ -50,11 +50,17 @@
   ;
 }
 .header-socials *{
-  @apply bg-primary-light
+  @apply 
     flex justify-center items-center
     w-[2em] h-[2em]
-    border-2 border-white
     rounded-full
+    text-white
+  ;
+}
+.social {
+  @apply
+   text-white 
+   text-[1rem]
   ;
 }
 

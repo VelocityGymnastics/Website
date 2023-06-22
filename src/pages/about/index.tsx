@@ -8,7 +8,7 @@ const About: React.FC = () => {
   return (
     <>
       <main className="h-screen flex-col bg-gradient-to-t from-primary-light to-primary-dark">
-        <Header />
+        <Header current="About"/>
 
         <div className="grow flex-col -center">
           <h1> About Us </h1>
