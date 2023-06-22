@@ -10,7 +10,9 @@ const Footer = () => {//props: FooterProps) => {
 
   return (
     <div>
-      <div className="abs-bl w-[25vw] h-[25vw] overflow-hidden flex -center bg-secondary-dark rounded-tr-2xl border-r-4 border-t-2 border-white">
+      <div className="footer">
+       <h3 className="footer-text">Velocity Gymnastics</h3>
+       <h3 className="footer-text">Est. 2023</h3>
       </div>
     </div>
   );

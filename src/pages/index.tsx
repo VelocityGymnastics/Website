@@ -3,20 +3,21 @@
 //import { api } from "~/utils/api";
 import React from "react"
 import Header from "../components/Header"
-//import Footer from "../components/Footer"
+import Footer from "../components/Footer"
 
 
 const Home: React.FC = () => {
 
   return (
     <>
-      <main className="fixed bg-gradient-to-t from-primary-light to-primary-dark">
+      <main className="h-screen flex-col bg-gradient-to-t from-primary-light to-primary-dark">
         <Header />
 
-        <div className="screen flex-col -center">
+        <div className="grow flex-col -center">
           <h1> HOME </h1>
         </div>
 
+        <Footer />
       </main>
     </>
   );

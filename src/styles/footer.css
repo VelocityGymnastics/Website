@@ -1,4 +1,14 @@
 /**/
-.footer-margin {
-  @apply h-[28vw] w-full;
+.footer{
+  @apply 
+    w-full h-[2em] 
+    flex justify-around items-center 
+    bg-secondary-dark
+    border-t-4 border-white
+  ;
+}
+.footer-text {
+  @apply 
+    text-white
+  ;
 }

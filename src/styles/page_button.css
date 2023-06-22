@@ -1,9 +1,10 @@
 .page-button {
   @apply bg-primary
     flex justify-center items-center 
-    w-[10vw] max-w-[20vw]
+    w-[75vw] md:w-auto 
     text-white
     border-white border-2
     rounded-lg
+    pl-4 pr-4
   ;
 }

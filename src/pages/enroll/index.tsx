@@ -7,10 +7,10 @@ const Enroll: React.FC = () => {
 
   return (
     <>
-      <main className="fixed bg-gradient-to-t from-primary-light to-primary-dark">
+      <main className="h-screen flex-col bg-gradient-to-t from-primary-light to-primary-dark">
         <Header />
 
-        <div className="screen flex-col -center">
+        <div className="grow flex-col -center">
           <h1> Enroll </h1>
         </div>
 
